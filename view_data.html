@@ -13,7 +13,10 @@
   <section>
     <div class="container">
       <h1 style="margin-top: 50px;">Data Karyawan</h1>
-      <a class="btn btn-success ms-2 mt-5" style="background-color: #b385a8; border:none; margin-bottom: 30px;" href="add_data.html">Add Data</a>
+      <a class="btn btn-success ms-2 mt-5" style="background-color: #224466; border:none; margin-bottom: 30px;" href="add_data.html">Add Data</a>
+      <div class="container">
+        <input class="form-control" id="myInput" type="text" placeholder="Search..">
+        <div class="p-2 bd-highlight"></div>
       <table id="dataTable" class="table table-bordered table-hover">
           <thead>
               <th>NIK</th>
@@ -21,11 +24,19 @@
               <th>Jenis Kelamin</th>
               <th>Alamat</th>
               <th>Divisi</th>
-              <th>Controls</th>
+              <th>Action</th>
           </thead>
       </table>
     </div>
   </section>
+
+  <script>
+    function getAll(){
+    const respon = axios.get("http://localhost:8080/datakaryawan/karyawan")
+    const dr = respon.then(resp => resp.data)
+    return dr
+    }
+  </script>
   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

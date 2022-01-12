@@ -15,6 +15,15 @@ function signOut() {
   });
 }
 
+$(document).ready(function() {
+  $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#dataTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+  });
+});
+
 $("#dataTable").ready(function () {
   var tabel = document.getElementById("dataTable")
   getAll().then(response => {

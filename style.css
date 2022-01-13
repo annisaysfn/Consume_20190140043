@@ -16,3 +16,7 @@
 #updateForm, #newForm {
     display: none;
 }
+
+.table {
+    background-color: rgb(245, 247, 247);
+}

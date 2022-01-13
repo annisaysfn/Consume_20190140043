@@ -42,9 +42,9 @@ $("#dataTable").ready(function () {
           td3.innerHTML = response[i].jenisKelamin
           td4.innerHTML = response[i].alamat
           td5.innerHTML = response[i].divisi
-          td6.innerHTML = `<div class ="justify content-center">
-          <a class="btn ms-2" style="background-color: #858ab3; border:none;" href="edit_data.html?nik=${response[i].nik}">Edit</a>
-          <button type ="button" class="btn ms-2" style="background-color: #858ab3; border:none;" onclick="del(${response[i].nik});">Delete</button>
+          td6.innerHTML = `<div class ="text-center align-middler">
+          <a class="btn btn-warning btn-sm text-white" href="edit_data.html?nik=${response[i].nik}">Edit</a>
+          <button type ="button" class="btn btn-danger btn-sm" onclick="del(${response[i].nik});">Delete</button>
           </div>`
           }
       }
